@@ -22,23 +22,21 @@ const Signup = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: false });
-    signup({ name, lastName, email, password })
-      .then((data) => {
-        if (data.error) {
-          setValues({ ...values, error: data.error, success: false });
-        } else {
-          setValues({
-            ...values,
-            name: "",
-            lastName: "",
-            email: "",
-            password: "",
-            error: "",
-            success: true,
-          });
-        }
-      })
-      .catch(console.log("Error in signup"));
+    signup({ name, lastName, email, password }).then((data) => {
+      if (data.error) {
+        setValues({ ...values, error: data.error, success: false });
+      } else {
+        setValues({
+          ...values,
+          name: "",
+          lastName: "",
+          email: "",
+          password: "",
+          error: "",
+          success: true,
+        });
+      }
+    });
   };
   const signupForm = () => {
     return (
@@ -58,7 +56,7 @@ const Signup = () => {
                 borderWidth: "1px",
                 borderColor: "grey",
               }}
-              className="p-5 m-5"
+              className="p-5"
             >
               <Form>
                 <Form.Group>
