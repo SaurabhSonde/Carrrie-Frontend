@@ -77,7 +77,7 @@ const Signin = () => {
                 borderWidth: "1px",
                 borderColor: "grey",
               }}
-              className="p-5 m-5"
+              className="p-5"
             >
               <Form>
                 <Form.Group controlId="formBasicEmail">
